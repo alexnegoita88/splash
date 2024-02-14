@@ -16,26 +16,26 @@ return new class extends Migration
 
             $table->string('event_name');
             $table->string('event_url');
-            $table->timestamp('event_date')->nullable;
+            $table->timestamp('event_date')->nullable();
             $table->string('event_venue');
-            $table->string('segment_id')->nullable;
-            $table->string('genre_id')->nullable;
-            $table->string('subgenre_id')->nullable;
+            $table->string('segment_id')->nullable();
+            $table->string('genre_id')->nullable();
+            $table->string('subgenre_id')->nullable();
             $table->string('event_city');
             $table->string('event_state');
             $table->string('event_zip');
-            $table->string('event_country')->nullable;
-            $table->string('event_tm_seat_id')->nullable;
-            $table->string('event_tm_id')->nullable;
-            $table->string('event_tm_venue_id')->nullable;
-            $table->integer('inventory')->nullable;
-            $table->integer('resale_inventory')->nullable;
-            $table->boolean('is_resale')->nullable;
-            $table->string('tm_event_status')->nullable;
+            $table->string('event_country')->nullable();
+            $table->string('event_tm_seat_id')->nullable();
+            $table->string('event_tm_id')->nullable();
+            $table->string('event_tm_venue_id')->nullable();
+            $table->integer('inventory')->nullable();
+            $table->integer('resale_inventory')->nullable();
+            $table->boolean('is_resale')->nullable();
+            $table->string('tm_event_status')->nullable();
             $table->timestamps();
-            $table->boolean('ignore_scraping')->nullable;
-            $table->string('scrape_status')->nullable;
-            $table->string('event_timezone')->nullable;
+            $table->boolean('ignore_scraping')->nullable();
+            $table->string('scrape_status')->nullable();
+            $table->string('event_timezone')->nullable();
         });
     }
 

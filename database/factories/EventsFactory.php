@@ -21,7 +21,7 @@ class EventsFactory extends Factory
         return [
             'event_name' => fake()->name,
             'event_url' => fake()->url,
-            'event_date' => fake()->date,
+            'event_date' => fake()->dateTimeBetween('-30 days', '+30 days'),
             'event_venue' => Str::random(5),
             'segment_id' => Str::random(5),
             'genre_id' => Str::random(5),

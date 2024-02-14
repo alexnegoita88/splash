@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Events;
-use DB;
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class EventsDailyNumbersSeeder extends Seeder
 {
@@ -17,7 +18,7 @@ class EventsDailyNumbersSeeder extends Seeder
         DB::table('tm_daily_numbers')->insert([
             'name' => fake()->name,
             'url' => fake()->url,
-            'start_date' => fake()->dateTime(),
+            'start_date' => fake()->dateTimeBetween('-30 days', '+30 days')->format('Y-m-d H:i:s'),
             'segment_id' => fake()->randomNumber(),
             'venue_name' => fake()->name,
             'venue_id' => fake()->randomNumber(),
@@ -139,9 +140,9 @@ class EventsDailyNumbersSeeder extends Seeder
             'month_added_thirdparty' => fake()->randomNumber(),
             'week_sold_thirdparty' => fake()->randomNumber(),
             'month_sold_thirdparty' => fake()->randomNumber(),
-            'last_scrape' => fake()->dateTime(),
-            'created_at' => fake()->dateTime(),
-            'updated_at' => fake()->dateTime(),
+            'last_scrape' => fake()->dateTimeBetween('-30 days', '+30 days')->format('Y-m-d H:i:s'),
+            'created_at' => fake()->dateTimeBetween('-30 days', '+30 days')->format('Y-m-d H:i:s'),
+            'updated_at' => fake()->dateTimeBetween('-30 days', '+30 days')->format('Y-m-d H:i:s'),
         ]);
 
     }

@@ -22,10 +22,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call(EventsSeeder::class);
 
-        for($i=0; $i<1000; $i++) {
+        for($i=0; $i<10000; $i++) {
             $this->call(EventsDailyNumbersSeeder::class);
         }
-        
+
 
     }
 }
