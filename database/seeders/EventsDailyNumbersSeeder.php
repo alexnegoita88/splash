@@ -23,7 +23,7 @@ class EventsDailyNumbersSeeder extends Seeder
             'venue_name' => fake()->name,
             'venue_id' => fake()->randomNumber(),
             'tm_event_id' => Events::inRandomOrder()->first()->id,
-            'statistic_date' => fake()->date,
+            'statistic_date' => fake()->dateTimeBetween('-30 days', '+30 days')->format('Y-m-d H:i:s'),
             'gaprimary' => fake()->randomNumber(),
             'garesale' => fake()->randomNumber(),
             'gavip' => fake()->randomNumber(),
