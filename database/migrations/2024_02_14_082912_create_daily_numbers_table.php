@@ -1,0 +1,154 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('tm_daily_numbers', function (Blueprint $table) {
+            $table->id();
+
+            $table->string('name')->nullable;
+            $table->string('url')->nullable;
+            $table->timestamp('start_date')->nullable;
+            $table->string('segment_id')->nullable;
+            $table->string('venue_name')->nullable;
+            $table->string('venue_id');
+            $table->unsignedBigInteger('tm_event_id');
+            $table->timestamp('statistic_date')->nullable;
+            $table->integer('gaprimary')->nullable;
+            $table->integer('garesale')->nullable;
+            $table->integer('gavip')->nullable;
+            $table->integer('gaplatinum')->nullable;
+            $table->integer('primary')->nullable;
+            $table->integer('resale')->nullable;
+            $table->integer('vip')->nullable;
+            $table->integer('platinum')->nullable;
+            $table->integer('total')->nullable;
+            $table->integer('yesterday_gaprimary')->nullable;
+            $table->integer('yesterday_garesale')->nullable;
+            $table->integer('yesterday_gavip')->nullable;
+            $table->integer('yesterday_gaplatinum')->nullable;
+            $table->integer('yesterday_primary')->nullable;
+            $table->integer('yesterday_resale')->nullable;
+            $table->integer('yesterday_vip')->nullable;
+            $table->integer('yesterday_platinum')->nullable;
+            $table->integer('yesterday_total')->nullable;
+            $table->integer('added_gaprimary')->nullable;
+            $table->integer('added_garesale')->nullable;
+            $table->integer('added_gavip')->nullable;
+            $table->integer('added_gaplatinum')->nullable;
+            $table->integer('added_primary')->nullable;
+            $table->integer('added_resale')->nullable;
+            $table->integer('added_vip')->nullable;
+            $table->integer('added_platinum')->nullable;
+            $table->integer('added_total')->nullable;
+            $table->integer('sold_gaprimary')->nullable;
+            $table->integer('sold_garesale')->nullable;
+            $table->integer('sold_gavip')->nullable;
+            $table->integer('sold_gaplatinum')->nullable;
+            $table->integer('sold_primary')->nullable;
+            $table->integer('sold_resale')->nullable;
+            $table->integer('sold_vip')->nullable;
+            $table->integer('sold_platinum')->nullable;
+            $table->integer('sold_total')->nullable;
+            $table->integer('thirdparty')->nullable;
+            $table->integer('yesterday_thirdparty')->nullable;
+            $table->integer('added_thirdparty')->nullable;
+            $table->integer('sold_thirdparty')->nullable;
+            $table->integer('day_primary_delta')->nullable;
+            $table->integer('day_primary_delta_diff')->nullable;
+            $table->integer('week_primary_delta')->nullable;
+            $table->integer('week_primary_delta_diff')->nullable;
+            $table->integer('month_primary_delta')->nullable;
+            $table->integer('month_primary_delta_diff')->nullable;
+            $table->integer('day_gaprimary_delta')->nullable;
+            $table->integer('day_gaprimary_delta_diff')->nullable;
+            $table->integer('week_gaprimary_delta')->nullable;
+            $table->integer('week_gaprimary_delta_diff')->nullable;
+            $table->integer('month_gaprimary_delta')->nullable;
+            $table->integer('month_gaprimary_delta_diff')->nullable;
+            $table->integer('day_vip_delta')->nullable;
+            $table->integer('day_vip_delta_diff')->nullable;
+            $table->integer('week_vip_delta')->nullable;
+            $table->integer('week_vip_delta_diff')->nullable;
+            $table->integer('month_vip_delta')->nullable;
+            $table->integer('month_vip_delta_diff')->nullable;
+            $table->integer('day_platinum_delta')->nullable;
+            $table->integer('day_platinum_delta_diff')->nullable;
+            $table->integer('week_platinum_delta')->nullable;
+            $table->integer('week_platinum_delta_diff')->nullable;
+            $table->integer('month_platinum_delta')->nullable;
+            $table->integer('month_platinum_delta_diff')->nullable;
+            $table->integer('day_resale_delta')->nullable;
+            $table->integer('day_resale_delta_diff')->nullable;
+            $table->integer('week_resale_delta')->nullable;
+            $table->integer('week_resale_delta_diff')->nullable;
+            $table->integer('month_resale_delta')->nullable;
+            $table->integer('month_resale_delta_diff')->nullable;
+            $table->integer('day_garesale_delta')->nullable;
+            $table->integer('day_garesale_delta_diff')->nullable;
+            $table->integer('week_garesale_delta')->nullable;
+            $table->integer('week_garesale_delta_diff')->nullable;
+            $table->integer('month_garesale_delta')->nullable;
+            $table->integer('month_garesale_delta_diff')->nullable;
+            $table->integer('week_added_gaprimary')->nullable;
+            $table->integer('month_added_gaprimary')->nullable;
+            $table->integer('week_added_garesale')->nullable;
+            $table->integer('month_added_garesale')->nullable;
+            $table->integer('week_added_gavip')->nullable;
+            $table->integer('month_added_gavip')->nullable;
+            $table->integer('week_added_gaplatinum')->nullable;
+            $table->integer('month_added_gaplatinum')->nullable;
+            $table->integer('week_added_primary')->nullable;
+            $table->integer('month_added_primary')->nullable;
+            $table->integer('week_added_resale')->nullable;
+            $table->integer('month_added_resale')->nullable;
+            $table->integer('week_added_vip')->nullable;
+            $table->integer('month_added_vip')->nullable;
+            $table->integer('week_added_platinum')->nullable;
+            $table->integer('month_added_platinum')->nullable;
+            $table->integer('week_added_total')->nullable;
+            $table->integer('month_added_total')->nullable;
+            $table->integer('week_sold_gaprimary')->nullable;
+            $table->integer('month_sold_gaprimary')->nullable;
+            $table->integer('week_sold_garesale')->nullable;
+            $table->integer('month_sold_garesale')->nullable;
+            $table->integer('week_sold_gavip')->nullable;
+            $table->integer('month_sold_gavip')->nullable;
+            $table->integer('week_sold_gaplatinum')->nullable;
+            $table->integer('month_sold_gaplatinum')->nullable;
+            $table->integer('week_sold_primary')->nullable;
+            $table->integer('month_sold_primary')->nullable;
+            $table->integer('week_sold_resale')->nullable;
+            $table->integer('month_sold_resale')->nullable;
+            $table->integer('week_sold_vip')->nullable;
+            $table->integer('month_sold_vip')->nullable;
+            $table->integer('week_sold_platinum')->nullable;
+            $table->integer('month_sold_platinum')->nullable;
+            $table->integer('week_sold_total')->nullable;
+            $table->integer('month_sold_total')->nullable;
+            $table->integer('week_added_thirdparty')->nullable;
+            $table->integer('month_added_thirdparty')->nullable;
+            $table->integer('week_sold_thirdparty')->nullable;
+            $table->integer('month_sold_thirdparty')->nullable;
+            $table->timestamp('last_scrape')->nullable;
+            
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('tm_daily_numbers');
+    }
+};
