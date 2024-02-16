@@ -55,7 +55,7 @@ class EventsDailyNumbersSeeder extends Seeder
             'sold_garesale' => fake()->randomDigit(),
             'sold_gavip' => fake()->randomDigit(),
             'sold_gaplatinum' => fake()->randomDigit(),
-            'sold_primary' => fake()->randomDigit(),
+            'sold_primary' => fake()->randomNumber(2),
             'sold_resale' => fake()->randomDigit(),
             'sold_vip' => fake()->randomDigit(),
             'sold_platinum' => fake()->randomDigit(),
