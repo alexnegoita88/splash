@@ -1,3 +1,11 @@
+# <code>composer update</code><br>
+# <code>php artisan migrate</code><br>
+<p>Am creat tabelele in baza de date folosindu-ma de EventsFactory in cazul evenimentelor si seeders (atat pentru evenimente cat si pentru daily_numbers</p> 
+
+# <code>php artisan db:seed</code>
+<p>Pentru a avea parte de cat mai multe rezultate am rulat seederul pentru inregistrari in tm_daily_numbers din DatabaseSeeder printr-un for loop care adauga 10000 de randuri</p>
+<p>Ca perioade de timp am ales un interval de -30 de zile + 30 de zile atat pentru data evenimentelor cat si pentru data la care <i>s-ar fi produs</i> vanzarea/inregistrarea in baza de date</p>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
